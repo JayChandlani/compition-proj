@@ -2,7 +2,7 @@ import { Box, Button, Typography } from '@mui/material'
 import { useEffect, useState } from 'react'
 import CallIcon from '@mui/icons-material/Call';
 const Waiting = ({ user }) => {
-    const [timeLeft, setTimeLeft] = useState(5);
+    const [timeLeft, setTimeLeft] = useState(60);
 
     useEffect(() => {
         const timer = setInterval(() => { setTimeLeft(time => time - 1) }, 1000)
@@ -12,13 +12,6 @@ const Waiting = ({ user }) => {
         }
         return () => clearInterval(timer);// eslint-disable-next-line
     }, [])
-
-    // useEffect(() => {
-    //     if (timeLeft === 0) {
-    //         clearInterval(timer);
-    //     }
-    //     // reset the interval after the timer is done.
-    // }, [timeLeft]);
 
     return (
         <Box sx={{

@@ -1,4 +1,4 @@
-import { Box, Button } from '@mui/material'
+import { Box } from '@mui/material'
 import React, { useState } from 'react'
 import ComplaintForm from './components/ComplaintForm'
 import Navbar from './components/Navbar'
@@ -22,7 +22,6 @@ const App = () => {
         {countdown ? <Waiting user={user} /> : <ComplaintForm handleCountDown={handleCountDown} />
         }
       </Box>
-      <Button onClick={()=>setCountdown(!countdown)}>Toggle</Button>
     </>
   )
 }
