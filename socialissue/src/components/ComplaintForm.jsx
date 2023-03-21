@@ -34,7 +34,7 @@ const ComplaintForm = ({ handleCountDown }) => {
         }
         formData.append("picturePath", values.picture.name);
         const savedUserResponse = await fetch(
-            "http://localhost:3001/register",
+            "https://socialissue-backend.onrender.com/register",
             {
                 method: "POST",
                 body: formData,
