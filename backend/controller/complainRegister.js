@@ -17,7 +17,7 @@ export const register = async (req, res) => {
             name: fullName,
             email,
             picturePath,
-            phone:phoneNumber,
+            phone: phoneNumber,
             aadhar,
             message,
             fraud
